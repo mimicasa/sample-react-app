@@ -1,5 +1,4 @@
 import { handleActions } from 'redux-actions'
-import { keys, values, set, get } from 'lodash'
 
 import { receiveEntities, setSelectedItem, setSetAlreadyRead } from 'actions/posts'
 
