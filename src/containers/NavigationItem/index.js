@@ -6,7 +6,6 @@ import Moment from 'moment'
 
 class NavigationItem extends Component {
     async onClickNavItem(id) {
-        console.log('id: ', id)
         const { setSelectedItem, setSetAlreadyRead } = this.props
         await setSelectedItem(id)
         await setSetAlreadyRead(id)

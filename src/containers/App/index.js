@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 
-import { routerActions } from 'react-router-redux'
 import { getPosts } from 'actions/posts'
 import NavigationItem from 'containers/NavigationItem'
 import Content from 'components/Content'
@@ -57,7 +56,6 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 const mapDispatchToProps = {
-  changeUrl: routerActions.push,
   getPosts,
 }
 
