@@ -45,7 +45,7 @@ App.propTypes = {
 
 const mapStateToProps = (state, ownProps) => {
   const posts = state.entities ? state.entities.posts : null
-  const selectedItem = state.content.selectedItem
+  const selectedItem = state.entities.selectedItem
   const selectedPost = posts ? posts[selectedItem] : null
 
   return {

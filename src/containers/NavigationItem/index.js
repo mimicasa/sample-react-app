@@ -1,8 +1,7 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { setSetAlreadyRead, setSelectedItem } from 'actions/posts'
 import './navigationItem.less'
-import Moment from 'moment'
 
 class NavigationItem extends Component {
     async onClickNavItem(id) {
@@ -12,7 +11,7 @@ class NavigationItem extends Component {
     }
 
     render() {
-        const {id, selectedItem, read, post} = this.props
+        const {id, selectedItem, post} = this.props
 
     
         return <div className={`NavigationItem ${selectedItem == id ? 'NavigationItem--selected' : ''}`} onClick={::this.onClickNavItem.bind(this, id)}>
@@ -22,9 +21,6 @@ class NavigationItem extends Component {
         <br/>
     </div>
     }
-}
-
-NavigationItem.propTypes = {
 }
 
 const mapStateToProps = (state) => ({
